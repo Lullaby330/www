@@ -37,21 +37,19 @@ class Bot(Client):
                 self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
                 self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
                 sys.exit()
+
 if FORCE_SUB_GROUP:
             try:
-                link = await self.export_chat_invite_link(FORCE_SUB_GROUP)
+                link = (await self.get_chat(FORCE_SUB_GROUP)).invite_link
+                if not link:
+                    await self.export_chat_invite_link(FORCE_SUB_GROUP)
+                    link = (await self.get_chat(FORCE_SUB_GROUP)).invite_link
                 self.invitelink2 = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning(
-                    "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_GROUP!"
-                )
-                self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_GROUP dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Group Saat Ini: {FORCE_SUB_GROUP}"
-                )
-                self.LOGGER(__name__).info(
-                    "\nBot Berhenti. Gabung Group https://t.me/OkaeriUserbot untuk Bantuan"
-                )
+                self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Group!")
+                self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_GROUP value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
+                self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
                 sys.exit()
 
         try:
