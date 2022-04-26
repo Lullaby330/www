@@ -28,9 +28,14 @@ async def is_subscribed(filter, client, update):
         member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
         member = await client.get_chat_member(chat_id=FORCE_SUB_GROUP, user_id=user_id)
 
-                return False
+                except UserNotParticipant:
+        return False
+
+    if not member.status in ["creator", "administrator", "member"]:
+        return False
     else:
         return True
+
 
 async def encode(string):
     string_bytes = string.encode("ascii")
