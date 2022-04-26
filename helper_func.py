@@ -10,17 +10,31 @@ from pyrogram.errors import FloodWait
 
 async def is_subscribed(filter, client, update):
     if not FORCE_SUB_CHANNEL:
-        return True
-    user_id = update.from_user.id
-    if user_id in ADMINS:
-        return True
-    try:
-        member = await client.get_chat_member(chat_id = FORCE_SUB_CHANNEL, user_id = user_id)
-    except UserNotParticipant:
-        return False
 
-    if not member.status in ["creator", "administrator", "member"]:
-        return False
+        return True
+
+    if not FORCE_SUB_GROUP:
+
+        return True
+
+    
+
+
+
+    user_id = update.from_user.id
+
+    if user_id in ADMINS:
+
+        return True
+
+    try:
+
+        member = await client.get_chat_member(chat_id=FORCE_SUB_CHANNEL, user_id=user_id)
+
+
+        member = await client.get_chat_member(chat_id=FORCE_SUB_GROUP, user_id=user_id)
+
+                return False
     else:
         return True
 
