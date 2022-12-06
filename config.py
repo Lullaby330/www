@@ -15,19 +15,19 @@ API_HASH = os.environ.get("API_HASH", "5c7418e9f3df6db931caa7354521c55f")
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001734154791"))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "5004087685"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5220678179"))
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "postgres://iuuovcblzhwjoj:3e6c0bd741285694c7a1052847c2c73d8f612a40125fc231a5c8bc9ee4204555@ec2-44-195-213-186.compute-1.amazonaws.com:5432/danl4pquo0bmft")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001716657426"))
-FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001545996586"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001554135295"))
+FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001739942775"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "{first} Kamu Harus Join Channel Dan Grup Terlebih Dahulu Ya Sebelum Melihat File Video ini.\n\nTutorial :\n-[1.  Klik Start Bot\n-[2. Join Channel & Group⬇️\n-[3. Try Again dan Start-\n[4. Tunggu hingga Video nya Muncul\n-[5. Selamat Menikmati Asupan nya\nNote :\nJangan spam ya karna bisa membuat bot delayed.\nSekian dan Terima Kasih.")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "5220678179").split()):
@@ -36,7 +36,11 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hai {first} Kamu Harus Join Channel Dan Grup Terlebih Dahulu Ya Sebelum Melihat File Video ini.\n\nTutorial :\n-[1. Wajib Join Channel & Group⬇️ :\n* https://t.me/+yxKqV1nBGB4xZTY9\n* https://t.me/+jb8dSWXy2ak2OWY1\n-[2. Klik Coba Lagi dan Start\n-[3. Tunggu hingga Video nya Muncu\n-[4. Selamat Menikmati Asupan nya
+
+Note :
+Jangan spam ya karna bisa membuat bot delayed.
+Sekian dan Terima Kasih.")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
