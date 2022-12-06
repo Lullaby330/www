@@ -3,7 +3,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5893702352:AAEcYJQ8R5izwxDbnP8AZX8-CN1z76PsslE")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5312133836:AAHm8esiRk3h4QcfqHedlA374wwsz5nYe4g")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", "6216349"))
@@ -12,17 +12,17 @@ APP_ID = int(os.environ.get("APP_ID", "6216349"))
 API_HASH = os.environ.get("API_HASH", "5c7418e9f3df6db931caa7354521c55f")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001834933865"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1001734154791"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "5004087685"))
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "postgres://ulztukhfktkyzt:ba9aa8a26de26e62d7a8a45d02687474b6b099dddeab9fe50eee5dee0cd0582b@ec2-52-72-34-79.compute-1.amazonaws.com:5432/dc63dpliglvkr7")
+DB_URI = os.environ.get("DATABASE_URL", "postgres://iuuovcblzhwjoj:3e6c0bd741285694c7a1052847c2c73d8f612a40125fc231a5c8bc9ee4204555@ec2-44-195-213-186.compute-1.amazonaws.com:5432/danl4pquo0bmft")
 
 #force sub channel id, if you want enable force sub
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001276948276"))
-FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001665398152"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001716657426"))
+FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001545996586"))
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
@@ -30,7 +30,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5004087685").split()):
+    for x in (os.environ.get("ADMINS", "5220678179").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
