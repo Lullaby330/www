@@ -36,7 +36,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hai {first} Kamu Harus Join Channel Dan Grup Terlebih Dahulu Ya Sebelum Melihat File Video ini.\n\nTutorial :\n-[1. Wajib Join Channel & Group⬇️ :\n* https://t.me/+yxKqV1nBGB4xZTY9\n* https://t.me/+jb8dSWXy2ak2OWY1\n-[2. Klik Coba Lagi dan Start\n-[3. Tunggu hingga Video nya Muncu\n-[4. Selamat Menikmati Asupan nya
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
 
 Note :
 Jangan spam ya karna bisa membuat bot delayed.
